@@ -33,6 +33,7 @@ const app = {
     },
 
     setBoardsList: function() {
+        
         const list = document.querySelector('.style-builder__boards');
         list.textContent = '';
         for (const key in app.boards) {
