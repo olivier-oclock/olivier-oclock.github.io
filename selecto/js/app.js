@@ -33,7 +33,7 @@ const app = {
     },
 
     setBoardsList: function() {
-        
+
         const list = document.querySelector('.style-builder__boards');
         list.textContent = '';
         for (const key in app.boards) {
@@ -55,16 +55,25 @@ const app = {
     },
 
     applySelector: function name() {
-        app.loadBoard(app.board);
-        const selectorElement = document.querySelector(`.style-builder__selector`);
-        const styleElement = document.querySelector(`.style-builder__style`);
+        app.loadBoard();
+        app.resetError();
+        
+        try {
+            app.checkSelector();
 
-        const selector = selectorElement.value;
-        const declarations = styleElement.value;
-
-        document.querySelector(`.tags`).querySelectorAll(selector).forEach((tag) => {
-            tag.setAttribute('style', declarations);
-        });
+            const selectorElement = document.querySelector(`.style-builder__selector`);
+            const styleElement = document.querySelector(`.style-builder__style`);
+    
+            const selector = selectorElement.value;
+            const declarations = styleElement.value;
+    
+            document.querySelector(`.tags`).querySelectorAll(selector).forEach((tag) => {
+                tag.setAttribute('style', declarations);
+            });    
+        } catch (error) {
+            app.displayError(error);
+        }
+        
     },
 
     updateDisplayCSS: function () {
@@ -74,6 +83,27 @@ const app = {
         document.querySelector(`.style-builder__css-declarations`).textContent = 
             document.querySelector(`.style-builder__style`).value;
         
+    },
+
+    checkSelector: function () {
+        const selector = document.querySelector(`.style-builder__selector`).value;
+        if (selector.length === 0) {
+            throw new Error("Le sélecteur ne doit pas être vide");
+        }
+        const results = document.querySelector(`.tags`).querySelectorAll(selector);
+        if (results.length === 0) {
+            throw new Error("Le sélecteur est invalide ou ne selectionne aucun élement");
+        }
+    },
+
+    displayError: function(error) {
+        const label = document.querySelector('.style-builder__label--error.style-builder__label--selector');
+        label.textContent = error.message;
+    },
+
+    resetError: function(error) {
+        const label = document.querySelector('.style-builder__label--error.style-builder__label--selector');
+        label.textContent = '';
     }
 }
 
