@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelectO</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+    <main class="main-container">
+        <div class="board">
+            <div class="tags">
+
+
+            </div>
+        </div>
+    
+        <div class="style-builder">
+    
+            <div class="style-builder__section">
+    
+                <label for="style-builder__selector" class="style-builder__label">
+                    Sélecteur
+                </label>
+                <input type="text" class="style-builder__selector" id="style-builder__selector">
+            </div>
+    
+            <div class="style-builder__section">
+                <label for="style-builder__style" class="style-builder__label">Déclarations</label>
+                <textarea class="style-builder__style" id="style-builder__style"></textarea>
+            </div>
+    
+            <div class="style-builder__section">
+                <label class="style-builder__label">Code CSS</label>
+
+                <div class="style-builder__css">
+                    <span class="style-builder__css-selector"></span> {
+                    <div class="style-builder__css-declarations">
+    
+                    </div>
+                    }
+                </div>
+            </div>
+    
+            <div class="style-builder__section">
+                <button class="style-builder__apply style-builder__button style-builder__button--main">
+                    Appliquer le style
+                </button>
+            </div>
+
+            <div class="style-builder__section">
+                <label for="style-builder__boards" class="style-builder__label" >Type de balises</label>
+                <div class="style-builder__boards" id="style-builder__boards"></div>
+            </div>
+    
+        </div>
+    
+    </main>
+
+    
+    <template class="template--simple">
+
+        <h1 class="tag">
+            <span class="tag__label">h1</span>
+            Titre principal
+        </h1>
+
+        <p class="tag">
+            <span class="tag__label">p</span>
+            Paragraphe de texte
+        </p>
+
+
+        <ul class="tag">
+            <span class="tag__label">ul</span>
+            <li class="tag">
+                <span class="tag__label">li</span>
+                Élement de liste
+            </li>
+            <li class="tag">
+                <span class="tag__label">li</span>
+                Élément de liste
+            </li>
+        </ul>
+
+    </template>
+
+    <template class="template--classes">
+
+        <p class="tag">
+            <span class="tag__label">p</span>
+            Paragraphe de texte
+        </p>
+
+        <p class="tag michel">
+            <span class="tag__label">p class="michel"</span>
+            Paragraphe de texte
+        </p>
+
+        <ul class="tag">
+            <span class="tag__label">ul</span>
+            <li class="tag">
+                <span class="tag__label">li</span>
+                Élement de liste
+            </li>
+            <li class="tag">
+                <span class="tag__label">li</span>
+                Élément de liste
+            </li>
+            <li class="tag important">
+                <span class="tag__label">li class="important"</span>
+                Élément de liste
+            </li>
+            <li class="tag">
+                <span class="tag__label">li</span>
+                Élément de liste
+            </li>
+        </ul>
+
+    </template>
+
+
+</body>
+
+</html>

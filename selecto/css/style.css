@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "oclock";
+    src: url("../fonts/oclock-regular.ttf");
+}
+@font-face {
+    font-family: "oclock-bold";
+    src: url("../fonts/oclock-bold.ttf");
+}
+
+:root {
+    --back-color: #0ac3a7;
+    --border-color: #383838;
+    --bg-color: #fffdd8;
+    --darker-main-color: #09a087;
+
+  }
+
+html {
+    background-color: var(--bg-color);
+    font-family: 'oclock', sans-serif;
+    margin: 0;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+}
+
+.board {
+    flex-grow: 1;
+}
+
+.style-builder {
+    width: 300px;
+    border-left: 5px solid var(--border-color);
+    height: 100vh;
+    padding: 10px;
+    background-color: var(--back-color);
+    box-sizing: border-box;
+}
+
+.style-builder__label {
+    margin: 10px 0;
+    display: block;
+    font-weight: bold;
+}
+
+.style-builder__section {
+    margin: 20px 0;
+}
+
+.style-builder__selector, .style-builder__style {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.style-builder__css {
+    background: white;
+    padding: 5px;
+    font-family: monospace, sans-serif;
+}
+
+.style-builder__css-declarations {
+    padding: 8px 10px 4px 10px;
+}
+
+.style-builder__button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--darker-main-color);
+    color: white;
+    cursor: pointer;
+}
+
+.style-builder__button--main {
+    font-size: 1.1em;
+}
+
+.style-builder__button--selected {
+    font-weight: bold;
+}
+
+.style-builder__boards button {
+    margin-right: 5px;
+}
+.tags {
+    padding: 20px;
+}
+
+.tag {
+    padding: 15px 10px;
+    border: 5px solid var(--border-color);
+    margin: 20px 0;
+    position: relative;
+}
+
+.tag__label {
+    position: absolute;
+    font-size: 1.3rem;
+    top: -15px;
+    background-color: var(--bg-color);
+    padding: 0 10px;
+    border: 2px solid var(--border-color);
+}
+
