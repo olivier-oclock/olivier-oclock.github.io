@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SelectO</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+    <main class="main-container">
+        <div class="board">
+            <div class="tags">
+
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt dolorem facilis, quia excepturi dolor voluptatum nostrum numquam voluptatibus sit suscipit? Ratione tenetur harum totam quos vero tempore cumque laboriosam ipsam.
+                </p>
+
+                <div class="block">
+                    Bloc dont on modifie le style
+                </div>
+
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, qui. Exercitationem dolorem distinctio aperiam nobis error veniam quibusdam, placeat pariatur reiciendis excepturi, illo iure rerum atque incidunt perferendis animi consectetur.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="style-builder">
+            <h1 class="style-builder__title">Box'O</h1>
+
+            <div class="style-builder__section">
+
+                <h2 class="style-builder__subtitle">Marge</h2>
+                <div class="style-builder__line">
+                    <label for="style-builder__margin-top" class="style-builder__label">
+                        haut
+                    </label>
+
+                    <input type="range" class="input input--range watch style-builder__margin-top"
+                        id="style-builder__margin-top" min="0" max="200" value="0">
+                </div>
+                <div class="style-builder__line">
+                    <label for="style-builder__margin-top" class="style-builder__label">
+                        droite
+                    </label>
+
+                    <input type="range" class="input input--range watch style-builder__margin-right"
+                        id="style-builder__margin-right" min="0" max="200" value="0">
+                </div>
+                <div class="style-builder__line">
+                    <label for="style-builder__margin-bottom" class="style-builder__label">
+                        bas
+                    </label>
+
+                    <input type="range" class="input input--range watch style-builder__margin-bottom"
+                        id="style-builder__margin-bottom" min="0" max="200" value="0">
+                </div>
+                <div class="style-builder__line">
+                    <label for="style-builder__margin-left" class="style-builder__label">
+                        gauche
+                    </label>
+
+                    <input type="range" class="input input--range watch style-builder__margin-left"
+                        id="style-builder__margin-left" min="0" max="200" value="0">
+                </div>
+            </div>
+
+            <div class="style-builder__section">
+                <h2 class="style-builder__subtitle">Bordure</h2>
+
+                <div class="style-builder__line">
+                    <label for="style-builder__border-width" class="style-builder__label">
+                        Épaisseur
+                    </label>
+
+                    <input type="range" class="input input--range watch style-builder__border-width"
+                        id="style-builder__border-width" min="0" max="20" value="0">
+                </div>
+                <div class="style-builder__line">
+                    <label for="style-builder__border-color" class="style-builder__label">
+                        Couleur
+                    </label>
+
+                    <input type="color" class="input input--color watch style-builder__border-color"
+                        id="style-builder__border-color" value="#000000">
+                </div>
+
+                <div class="style-builder__line">
+                    <label for="style-builder__border-style" class="style-builder__label">
+                        Style
+                    </label>
+
+                    <select id="style-builder__border-style" class="style-builder__border-style select watch"  >
+                        <option value="solid">solid</option>
+                        <option value="dotted">dotted</option>
+                        <option value="dashed">dashed</option>
+                        <option value="double">double</option>
+                        <option value="groove">groove</option>
+                        <option value="ridge">ridge</option>
+                        <option value="inset">inset</option>
+                        <option value="outset">outset</option>
+                        <option value="hidden">hidden</option>
+                    </select>
+
+                </div>
+            </div>
+
+            <div class="style-builder__section">
+
+                <h2 class="style-builder__subtitle">Padding</h2>
+
+                <div class="style-builder__line">
+
+                    <label for="style-builder__padding-top" class="style-builder__label">
+                        haut
+                    </label>
+
+                    <input type="range" class="input input--range watch style-builder__padding-top"
+                        id="style-builder__padding-top" min="0" max="200" value="0">
+                </div>
+                <div class="style-builder__line">
+
+                    <label for="style-builder__padding-top" class="style-builder__label">
+                        droite
+                    </label>
+
+                    <input type="range" class="input input--range watch style-builder__padding-right"
+                        id="style-builder__padding-right" min="0" max="200" value="0">
+                </div>
+                <div class="style-builder__line">
+
+                    <label for="style-builder__padding-bottom" class="style-builder__label">
+                        bas
+                    </label>
+
+                    <input type="range" class="input input--range watch style-builder__padding-bottom"
+                        id="style-builder__padding-bottom" min="0" max="200" value="0">
+
+                </div>
+                <div class="style-builder__line">
+
+                    <label for="style-builder__padding-left" class="style-builder__label">
+                        gauche
+                    </label>
+
+                    <input type="range" class="input input--range watch style-builder__padding-left"
+                        id="style-builder__padding-left" min="0" max="200" value="0">
+                </div>
+            </div>
+
+            <div class="style-builder__section">
+
+                <h2 class="style-builder__subtitle">Taille</h2>
+
+                <div class="style-builder__line">
+
+                    <label for="style-builder__width" class="style-builder__label">
+                        Largeur
+                    </label>
+
+                    <input type="text" class="input input--text watch style-builder__width"
+                        id="style-builder__width" value="100%">
+                </div>
+                <div class="style-builder__line">
+
+                    <label for="style-builder__height" class="style-builder__label">
+                        hauteur
+                    </label>
+
+                    <input type="text" class="input input--text watch style-builder__height"
+                        id="style-builder__height" value="auto">
+                </div>
+            </div>
+
+            <div class="style-builder__section">
+                <label class="style-builder__label">Code CSS</label>
+
+                <div class="style-builder__css">
+                    <span class="style-builder__css-selector">.block</span> {
+                    <pre class="style-builder__css-declarations"></pre>
+                    }
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
