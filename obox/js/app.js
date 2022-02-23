@@ -17,7 +17,7 @@ const app = {
             width: 0,
             color: '#000000'
         },
-        width: '100%',
+        width: 'auto',
         height: 'auto',
     },
     directions: ['top', 'right', 'bottom', 'left'],
